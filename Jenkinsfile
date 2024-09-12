@@ -11,6 +11,9 @@ node {
   
        app = docker.build("sikanderali/test")
     }
+    // stage('Build image') {
+    // sh 'sudo docker build -t sikanderali/test .'
+    // }
 
     stage('Test image') {
   
