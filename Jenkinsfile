@@ -7,25 +7,25 @@ node {
         checkout scm
     }
 
-    stage('Build image') {
+    // stage('Build image') {
   
-       app = docker.build("sikanderali/test")
-    }
+    //    app = docker.build("sikanderali/test")
+    // }
 
-    stage('Test image') {
+    // stage('Test image') {
   
 
-        app.inside {
-            sh 'echo "Tests passed"'
-        }
-    }
+    //     app.inside {
+    //         sh 'echo "Tests passed"'
+    //     }
+    // }
 
-    stage('Push image') {
+    // stage('Push image') {
         
-        docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
-            app.push("${env.BUILD_NUMBER}")
-        }
-    }
+    //     docker.withRegistry('https://registry.hub.docker.com', 'dockerhub') {
+    //         app.push("${env.BUILD_NUMBER}")
+    //     }
+    // }
     
     stage('Trigger ManifestUpdate') {
                 echo "triggering updatemanifestjob"
