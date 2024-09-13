@@ -3,4 +3,4 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello_world():
-    return 'Please subscribe, This is me Sikander Ali deployed with Argocd(cd) and jenkins(ci)commit(5)!!'
+    return 'Please subscribe, jenkins(ci) and Argocd(cd) commit(7)!!'
